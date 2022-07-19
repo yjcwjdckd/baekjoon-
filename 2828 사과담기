@@ -1,0 +1,21 @@
+n, m = map(int, input().split())
+
+num = int(input())
+
+place = 1
+i = 0
+result = 0
+apple = []
+for _ in range(num):
+    apple.append(int(input()))
+
+for app in apple:
+    if place <= app and place + (m-1) >= app:
+        pass
+    elif place > app:
+        result += abs(place-app)
+        place = app
+    else:
+        result += app - (m-1) - place
+        place = app -(m-1)
+print(result)
