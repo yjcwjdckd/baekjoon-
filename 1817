@@ -1,0 +1,16 @@
+
+
+book,box = map(int, input().split())
+
+if book == 0 :
+  print(0)
+else :
+    weight = list(map(int, input().split()))
+    sum = 0
+    count = 1
+    for i in reversed(weight):
+        sum += i
+        if sum > box:
+            count += 1
+            sum = i
+    print(count)
