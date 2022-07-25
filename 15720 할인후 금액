@@ -1,0 +1,21 @@
+b, s, d = map(int, input().split())
+
+burger = list(map(int, input().split()))
+side = list(map(int, input().split()))
+drink = list(map(int, input().split()))
+
+burger.sort(reverse = True)
+side.sort(reverse = True)
+drink.sort(reverse = True)
+
+result = 0
+min = min(b,s,d)
+for i in range(min):
+    result += (burger[i] + side[i] + drink[i]) * 0.9
+
+result += sum(burger[min::])
+result += sum(side[min::])
+result += sum(drink[min::])
+
+print(sum(burger) + sum(side) + sum(drink))
+print(int(result))
