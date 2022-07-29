@@ -1,0 +1,17 @@
+n, b1, b2 = map(int, input().split())
+
+damage = list(map(int, input().split()))
+damage1 = list(map(int, input().split()))
+count = 0
+
+for i in damage:
+    if i -1 in damage1:
+        damage1.remove(i-1)
+    elif i+1 in damage1:
+        damage1.remove(i+1)
+    else:
+        count += 1
+        
+print(count)
+
+
