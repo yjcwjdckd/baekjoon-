@@ -1,0 +1,7 @@
+current, next = map(int, input().split())
+
+n = int(input())
+
+button_mhz = [abs(int(input())-next) for i in range(n)]
+
+print(min(abs(current-next), min(button_mhz)+1))
