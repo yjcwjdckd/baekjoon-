@@ -1,0 +1,13 @@
+n = int(input())
+
+dough, top = map(int, input().split())
+
+dough_price = int(input())
+topping = [int(input()) for _ in range(n)]
+
+sum = 0
+topping.sort(reverse = True)
+sum += ( dough_price + max(topping) + topping[1])
+
+sum //= (dough + top*2)
+print(sum)
