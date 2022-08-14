@@ -1,7 +1,7 @@
 def solve(N,M):
-    max = max(N,M)
-    min = min(N,M)
-    return max + min + min//10
+    a = max(N,M)
+    b = min(N,M)
+    return a + b + b//10
 
 N1, M1= list(map(int, input().split()))
 ans = solve(N1,M1)

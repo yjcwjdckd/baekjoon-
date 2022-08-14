@@ -2,12 +2,19 @@ n = int(input())
 
 dough, top = map(int, input().split())
 
-dough_price = int(input())
+dough_cal = int(input())
 topping = [int(input()) for _ in range(n)]
-
-sum = 0
 topping.sort(reverse = True)
-sum += ( dough_price + max(topping) + topping[1])
 
-sum //= (dough + top*2)
-print(sum)
+result = dough_cal/dough
+
+for i in range(1, len(topping)+1):
+    cal = dough_cal + sum(topping[0:i])
+    sum = dough + (top*i)
+
+    if cal / sum > result:
+        result = cal/ sum
+    else:
+        break
+
+print(int(result))
